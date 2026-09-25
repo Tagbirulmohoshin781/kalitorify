@@ -135,3 +135,4 @@ Fix function for check Tor settings, some changes (see: commit, commit message)
 - Automatically create backup directory in setup_general() instead of aborting.
 - Modernize Makefile with DESTDIR and PREFIX packaging standards, reinstall target, and test check target.
 - Add .gitattributes (enforcing LF line endings for Linux bash scripts) and .gitignore.
+
