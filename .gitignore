@@ -1,0 +1,20 @@
+# Kalitorify .gitignore
+
+# Backups and temporary files
+*.backup
+*.bak
+*~
+*.swp
+*.swo
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Logs and test outputs
+*.log
+test_reports/
+tests/out/
+scratch/

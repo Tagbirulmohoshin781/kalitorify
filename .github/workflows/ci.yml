@@ -1,0 +1,26 @@
+name: CI & Code Quality
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Check Bash Syntax
+        run: bash -n kalitorify.sh
+
+      - name: Run ShellCheck
+        run: shellcheck -x kalitorify.sh -e SC2086,SC2155,SC2181
+
+      - name: Test Makefile Dry-Run
+        run: make -n install
